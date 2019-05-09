@@ -24,3 +24,6 @@ body, html {
     transform: translate(-50%, -50%);
     color: white;
   }
+  .btn {
+    border-radius: 0.3rem;
+  }
