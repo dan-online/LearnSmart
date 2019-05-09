@@ -53,7 +53,7 @@ include('access_control.php');
         $_SESSION['id_to_edit'] = $id_to_edit;
 
         $result = mysqli_query($connect,
-        "SELECT * FROM users WHERE id = $id_to_edit;");
+        "SELECT * FROM `LearnSmart` WHERE id = $id_to_edit;");
         while ($row = mysqli_fetch_array($result))
         {             
     ?>

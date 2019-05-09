@@ -17,7 +17,7 @@
     } else {
 
         // now we actually delete the user. 
-        $result = mysqli_query($connect,"DELETE FROM users WHERE id='$id_to_delete';");
+        $result = mysqli_query($connect,"DELETE FROM `LearnSmart` WHERE id='$id_to_delete';");
         header('location:users.php');
     }
 

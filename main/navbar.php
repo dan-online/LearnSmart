@@ -21,9 +21,8 @@
                   <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                     <?php 
-                      if ($access_control['logged_in'] == "no" || !$access_control['logged_in']) {
+                      if ($access_control['logged_in'] == "no") {
                     ?>
-
                     </li>
                     <li class="nav-item">
                     <a class="nav-link" href="/1819dw/LearnSmart/user/register.php">Sign up</a>
@@ -33,7 +32,7 @@
                       } else {
                     ?>
                         <a class="nav-link" href="#">You are logged in as
-                        <?php echo $access_control['email']; ?> </a>
+                        <?php echo $access_control['username']; ?> </a>
                         
                         </li>
                         <li class="nav-item">

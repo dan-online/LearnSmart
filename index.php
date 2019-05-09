@@ -2,8 +2,8 @@
 <html lang="en">
       
 <?php 
-include('main/navbar.php');
 include("main/head.php");
+include('main/navbar.php');
 include('main/database/access_control.php');
 ?>
 <body>
@@ -45,7 +45,7 @@ if ($access_control['logged_in'] == "no") {
   <div class="row">
     <div class="col-md-4">
       <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="/1819dw/LearnSmart/assets/images/logo.png" alt="Card image cap">
+        <img class="card-img-top" src="/1819dw/LearnSmart/assets/images/office.png" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -80,39 +80,7 @@ if ($access_control['logged_in'] == "no") {
 
 <?php
 } else { 
-?>
-<main role="main">
-
-<!-- Main jumbotron for a primary marketing message or call to action -->
-<div class="jumbotron">
-  <div class="container">
-    <h1 class="display-3">Hello, logged-in person!!</h1>
-    <p>You will only see this content if you are logged in. </p>
-    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
-  </div>
-</div>
-
-<div class="container">
-  <!-- Example row of columns -->
-  <div class="row">
-    <div class="col-md-4">
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-</div> <!-- /container -->
-
-</main>
-
-<?php
+location('header:./home/');
 }
 ?>
 

@@ -2,7 +2,7 @@
 session_start();
 // this file should be named register_process.php
 
-include('database_inc.php');
+include('../main/database/database_inc.php');
 
 // the lines below store the data submitted from a form (register.php) into variables
 
@@ -40,10 +40,10 @@ $unique_id = uniqid($more_entropy = TRUE);
 // TODO: add last_logged_in
 
 $result = mysqli_query($connect,
-    "INSERT INTO `users` 
+    "INSERT INTO `LearnSmart` 
     (`username`, `password`, `email`, `role`, `unique_id`) 
     VALUES ('$username', '$safe_password', '$email', 'Member', '$unique_id');");
 
 $_SESSION['registered_success'] = True;
-header('location:index.php');
+header('location:../home');
 ?>

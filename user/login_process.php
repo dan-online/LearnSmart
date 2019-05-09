@@ -1,8 +1,7 @@
 <?php
 // below we start a session and include our database connection
 session_start(); 
-include('database_inc.php');
-
+include('../main/database/database_inc.php');
 // the 2 lines below capture the data sent from a form.
 $email = $_POST['email'];
 $password = $_POST['password'];
@@ -13,7 +12,7 @@ $password = $_POST['password'];
 // we store the query into a variable named "$result"
 
 $result = mysqli_query($connect,
-"SELECT * FROM users WHERE email LIKE '$email';");
+"SELECT * FROM `LearnSmart` WHERE email LIKE '$email';");
 
 // the line below tests if our database query found any results. 
 
@@ -30,6 +29,7 @@ if (mysqli_num_rows($result) == 0) {
 
 while ($row = mysqli_fetch_array($result))
 {
+
   $password_in_databases = $row['password'];
   if (password_verify($password,$password_in_databases)) {
     $unique_id_of_logged_in_user = $row['unique_id'];
@@ -39,15 +39,13 @@ while ($row = mysqli_fetch_array($result))
     // https://stackoverflow.com/questions/2215354/php-date-format-when-inserting-into-datetime-in-mysql
 
     $time_date_now = date("Y-m-d H:i:s");
-    
-    $result2 = mysqli_query($connect,"UPDATE users SET 
+    $result2 = mysqli_query($connect,"UPDATE LearnSmart SET 
     last_logged_in = '$time_date_now', 
     logged_in_now = 1,
     session_id = '$session_id'
      WHERE unique_id = '$unique_id_of_logged_in_user';");
     $_SESSION['unique_id_of_logged_in_user'] = $unique_id_of_logged_in_user;
-
-    header('location:index.php');
+    header('location:../home');
   } else {
     $_SESSION['wrong_password'] = True;
     header('location:login.php');
