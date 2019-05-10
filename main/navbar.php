@@ -36,7 +36,7 @@
                         
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="/1819dw/LearnSmart/user/logout.php">Logout</a>
+                        <a class="nav-link btn btn-danger" href="/1819dw/LearnSmart/user/logout.php">Logout</a>
                         </li>
 
                     <?php
