@@ -8,7 +8,7 @@ include('main/database/access_control.php');
 ?>
 <body>
 
-<div class="container my-3"> <!-- open container -->
+<div style="margin-top: 7rem !important" class="container main my-3"> <!-- open container -->
 
 <?php 
 session_start();

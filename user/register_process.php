@@ -15,8 +15,8 @@ $username = $_POST['username'];
 // this replaces SQL characters with safe characters.
 // it's not perfect, but it's better than nothing!!
 
-$email = mysqli_real_escape_string($connect,$email);
-$username = mysqli_real_escape_string($connect,$username);
+$email = mysqli_real_escape_string($connect, $email);
+$username = mysqli_real_escape_string($connect, $username);
 
 
 // the line below creates an encryped password. 
