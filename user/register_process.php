@@ -41,8 +41,8 @@ $unique_id = uniqid($more_entropy = TRUE);
 
 $result = mysqli_query($connect,
     "INSERT INTO `LearnSmart` 
-    (`username`, `password`, `email`, `role`, `unique_id`) 
-    VALUES ('$username', '$safe_password', '$email', 'Member', '$unique_id');");
+    (`username`, `password`, `email`, `role`, `unique_id`, `Premium`) 
+    VALUES ('$username', '$safe_password', '$email', 'Member', '$unique_id', 0);");
 
 $_SESSION['registered_success'] = True;
 header('location:../home');
