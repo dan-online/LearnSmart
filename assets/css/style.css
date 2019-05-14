@@ -65,3 +65,6 @@ body, html
   {
     border-radius: 0.3rem;
   }
+  button {
+    outline: none
+  }
