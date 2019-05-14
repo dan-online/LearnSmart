@@ -5,19 +5,18 @@
       ?>
       <!-- start nav bar -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a class="navbar-brand" href="/1819dw/LearnSmart">
+                <a style="color: #407aef" class="navbar-brand" href="/1819dw/LearnSmart">
                   <img src="/1819dw/LearnSmart/assets/images/logo.png" width="60" height="60" alt=""> Learn Smart
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" onclick="if($(window).scrollTop() < 30)document.getElementsByClassName('navbar')[0].classList.toggle('nav-strict')" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav">
                     <li class="nav-item active">
-                      <a class="nav-link" href="/1819dw/LearnSmart">Home <span class="sr-only">(current)</span></a>
+                      <a style="font-size: 16px" class="btn btn-primary nav-link" href="/1819dw/LearnSmart">Home <span class="sr-only">(current)</span></a>
                     </li>
                   </ul>
-
                   <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                     <?php 
@@ -25,18 +24,18 @@
                     ?>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="/1819dw/LearnSmart/user/register.php">Sign up</a>
+                    <a class="btn btn-primary nav-link" href="/1819dw/LearnSmart/user/register.php">Sign up</a>
                     </li>
-                      <a class="nav-link" href="/1819dw/LearnSmart/user/login.php">Login</a>
+                      <a class="btn btn-primary nav-link" href="/1819dw/LearnSmart/user/login.php">Login</a>
                     <?php
                       } else {
                     ?>
-                        <a class="nav-link" href="#">You are logged in as
+                        <a class="btn btn-primary nav-link" href="#">You are logged in as
                         <?php echo $access_control['username']; ?> </a>
                         
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link btn btn-danger" href="/1819dw/LearnSmart/user/logout.php">Logout</a>
+                          <a class="btn btn-danger nav-link" href="/1819dw/LearnSmart/user/logout.php">Logout</a>
                         </li>
 
                     <?php
