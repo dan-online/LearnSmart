@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en">
 <?php 
-include('../main/navbar.php');
 include("../main/head.php");
 include('../main/database/access_control.php');
+include('../main/navbar.php');
 ?>
 <body>
 <div class="container m-3"> <!-- open container -->
