@@ -1,2 +1,4 @@
 .vscode/sftp.json
 main/database/database_inc.php
+main/.DS_Store
+.DS_Store
