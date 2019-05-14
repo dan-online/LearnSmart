@@ -47,7 +47,7 @@ if ($access_control['logged_in'] == "no") {
       <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="/1819dw/LearnSmart/assets/images/office.png" alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
+          <h5 class="card-title">Orest Brykowytch</h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
@@ -57,7 +57,7 @@ if ($access_control['logged_in'] == "no") {
       <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="/1819dw/LearnSmart/assets/images/globe.png" alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
+          <h5 class="card-title">Daniel Wilson</h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
@@ -67,7 +67,7 @@ if ($access_control['logged_in'] == "no") {
       <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="/1819dw/LearnSmart/assets/images/arrow.png" alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
+          <h5 class="card-title">Adam Whitmore</h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>

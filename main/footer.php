@@ -25,7 +25,7 @@ echo '</pre>';
                 <ul class="list-unstyled">
                 <li class="float-lg-right"><a href="#top">Back to top</a></li>
                 </ul>
-                <p>Created by <a href="https://dancodes.online">DanCodes</a>, Orest Brykowytch and Adam Whitmore</p>
+                <p>Created by <a href="https://dancodes.online">DanCodes</a>, <a href="https://orestbrykowytch.github.io">Orest Brykowytch</a>, and Adam Whitmore</p>
                 <p>Code open-sourced on <a href="https://github.com/MayorChano/LearnSmart">Github</a>.</p>
             </div>
             </div>
