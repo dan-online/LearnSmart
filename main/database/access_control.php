@@ -8,7 +8,7 @@ include('database_inc.php');
 $unique_id_of_logged_in_user = $_SESSION['unique_id_of_logged_in_user'];
 
 
-$access_logged_in_check_query = mysqli_query($connect,"SELECT * FROM `LearnSmart` WHERE logged_in_now = 1 AND unique_id = '$unique_id_of_logged_in_user';");
+$access_logged_in_check_query = mysqli_query($connect,"SELECT * FROM `LearnSmart` WHERE logged_in_now = 1 AND unique_id = $unique_id_of_logged_in_user;");
 
 while ($row = mysqli_fetch_array($access_logged_in_check_query))
 { 

@@ -1,9 +1,10 @@
 <!doctype html>
 <html lang="en">
 <?php 
-include("../main/head.php");
 include('../main/database/access_control.php');
+include('../main/head.php');
 include('../main/navbar.php');
+include('../main/database/access_control.php');
 ?>
 <body>
 <div class="container m-3 main"> <!-- open container -->

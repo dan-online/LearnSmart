@@ -2,10 +2,10 @@
 <html lang="en">
       
 <?php 
-include('main/database/access_control.php');
-include('main/head.php');
-include('main/navbar.php');
-include('main/database/access_control.php');
+include('../main/database/access_control.php');
+include('../main/head.php');
+include('../main/navbar.php');
+include('../main/database/access_control.php');
 ?>
 <body>
 
@@ -13,23 +13,9 @@ include('main/database/access_control.php');
 
 <?php 
 session_start();
-
-if($_SESSION['registered_success']) {
-  ?>
-
-  <div class="alert alert-success alert-dismissible fade show" role="alert">
-  <strong>Your account has been created.</strong> Go ahead and <a href="login.php">login</a> like the rockstar you are.
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
-
-<?php
-unset($_SESSION['registered_success']);
-}
 ?>
 
- <main role="main">
+<main role="main">
 
 
 <div class="container main">

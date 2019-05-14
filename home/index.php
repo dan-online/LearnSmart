@@ -2,9 +2,10 @@
 <html lang="en">
       
 <?php 
-include('main/head.php');
-include('main/navbar.php');
-include('main/database/access_control.php');
+include('../main/database/access_control.php');
+include('../main/head.php');
+include('../main/navbar.php');
+include('../main/database/access_control.php');
 ?>
 
     <body>
@@ -15,12 +16,14 @@ include('main/database/access_control.php');
         session_start();
         ?>
 
+
+
         </div>
 
         <?php
 
         include('main/footer.php');
-        
+
         ?>
     </body>
 </html>

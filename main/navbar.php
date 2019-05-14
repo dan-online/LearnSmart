@@ -1,6 +1,5 @@
       <?php 
       session_start();
-      include('main/database/access_control.php');
 
       ?>
       <!-- start nav bar -->
