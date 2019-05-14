@@ -1,23 +1,12 @@
 <!doctype html>
-<html lang="en">
-    <!-- Documentation: http://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
-  </head>
-
-  <!-- keep your content within body opening and closing tags -->
-  <body>
-      
+<html>
 <?php 
-include('header.php');
+include("../main/head.php");
+include('../main/database/access_control.php');
+include('../main/navbar.php');
 ?>
+<body>
+<div class="container m-3 main"> <!-- open container -->
 
 <div class="container my-3"> <!-- open container -->
 

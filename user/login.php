@@ -6,7 +6,7 @@ include('../main/database/access_control.php');
 include('../main/navbar.php');
 ?>
 <body>
-<div class="container m-3"> <!-- open container -->
+<div class="container m-3 main"> <!-- open container -->
 
 <?php 
 session_start();
