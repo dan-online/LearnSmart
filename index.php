@@ -8,7 +8,7 @@ include('main/database/access_control.php');
 ?>
 <body>
 
-<div style="margin-top: 7rem !important" class="container main my-3"> <!-- open container -->
+<div class="container main my-3"> <!-- open container -->
 
 <?php 
 session_start();
@@ -26,21 +26,12 @@ if($_SESSION['registered_success']) {
 <?php
 unset($_SESSION['registered_success']);
 }
-if ($access_control['logged_in'] == "no") {
 ?>
 
  <main role="main">
 
-<!-- Main jumbotron for a primary marketing message or call to action -->
-<div class="jumbotron">
-  <div class="container">
-    <h1 class="display-3">Hello, logged-out user!!</h1>
-    <p>This will be shown to LOGGED OUT users. </p>
-    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
-  </div>
-</div>
 
-<div class="container">
+<div class="container main">
   <!-- Example row of columns -->
   <div class="row">
     <div class="col-md-4">
@@ -77,12 +68,6 @@ if ($access_control['logged_in'] == "no") {
 
 </main>
 
-
-<?php
-} else { 
-location('header:./home/');
-}
-?>
 
 </div>
 

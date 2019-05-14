@@ -50,6 +50,10 @@ body, html
     color: #4582EC !important;
     background-color: white !important;
   }
+  .nav-strict .btn.btn-danger {
+    color: #fff !important;
+    background-color: #d9534f !important;
+  }
   /* Place text in the middle of the image */
   .opening-text
   {
@@ -64,4 +68,7 @@ body, html
   .btn
   {
     border-radius: 0.3rem;
+  }
+  button {
+    outline: none
   }
