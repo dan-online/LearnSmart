@@ -8,7 +8,6 @@ include('../main/navbar.php');
 <body>
 <div class="container m-3 main"> <!-- open container -->
 
-<div class="container my-3"> <!-- open container -->
 
 <div class="alert alert-info" role="alert">
   <p> <strong>Thank you</strong> for registering.</p>
