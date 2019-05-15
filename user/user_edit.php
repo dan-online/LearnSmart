@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <?php 
+session_start();
 include("../main/head.php");
 include('../main/database/access_control.php');
 include('../main/database/database_inc.php');
@@ -11,7 +12,8 @@ include('../main/navbar.php');
 <?php 
     if ($access_control['logged_in'] == "no")
     {
-    header('location:index.php');
+        echo  json_encode($access_control);
+    //header('location:index.php');
 ?>
 
 </div> <!-- /container -->
