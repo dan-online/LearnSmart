@@ -6,14 +6,11 @@ include('../main/database/access_control.php');
 include('../main/head.php');
 include('../main/navbar.php');
 include('../main/database/access_control.php');
+session_start();
 ?>
 <body>
 
 <div class="container main my-3"> <!-- open container -->
-
-<?php 
-session_start();
-?>
 
 <main role="main">
 

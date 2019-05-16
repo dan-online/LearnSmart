@@ -1,18 +1,15 @@
 <!doctype html>
 <html lang="en">
 <?php 
-include('../main/database/access_control.php');
 include('../main/head.php');
 include('../main/navbar.php');
 include('../main/database/access_control.php');
+session_start();
 ?>
 <body>
 <div class="container m-3 main"> <!-- open container -->
 
 <?php 
-session_start();
-include('access_control.php');
-
 if ($access_control['logged_in'] == "no") {
 ?>  
 

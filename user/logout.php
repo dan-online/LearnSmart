@@ -8,7 +8,8 @@
 
 session_start();
 
-if (isset($_SESSION['unique_id_of_logged_in_user'])) {
+if (isset($_SESSION['unique_id_of_logged_in_user']))
+{
 
     $unique_id_of_logged_in_user = $_SESSION['unique_id_of_logged_in_user'];
     include('database_inc.php');
