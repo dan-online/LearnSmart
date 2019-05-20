@@ -16,12 +16,15 @@ $result = mysqli_query($connect,
 
 // the line below tests if our database query found any results. 
 
-if (mysqli_num_rows($result) == 0) {
+if (mysqli_num_rows($result) == 0)
+{
   $no_email = True;
   $_SESSION['error_no_email'] = True;
   header('location:login.php');
 
-} else {
+}
+else
+{
 
 // the loop below iterates through the results (if there are any)
 // we use the actual colum names from our database in the results. 
@@ -31,7 +34,8 @@ while ($row = mysqli_fetch_array($result))
 {
 
   $password_in_databases = $row['password'];
-  if (password_verify($password,$password_in_databases)) {
+  if (password_verify($password,$password_in_databases))
+  {
     $unique_id_of_logged_in_user = $row['unique_id'];
 
     // when a login is successful, we update the last logged in time and set logged in to 1.
@@ -46,7 +50,9 @@ while ($row = mysqli_fetch_array($result))
      WHERE unique_id = '$unique_id_of_logged_in_user';");
     $_SESSION['unique_id_of_logged_in_user'] = $unique_id_of_logged_in_user;
     header('location:../home');
-  } else {
+  }
+  else
+  {
     $_SESSION['wrong_password'] = True;
     header('location:login.php');
   }

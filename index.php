@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-      
 <?php 
 include('main/database/access_control.php');
 include("main/head.php");
@@ -11,7 +10,6 @@ include('main/navbar.php');
 <div class="container main my-3"> <!-- open container -->
 
 <?php 
-session_start();
 
 if($_SESSION['registered_success']) {
   ?>
@@ -32,39 +30,8 @@ unset($_SESSION['registered_success']);
 
 
 <div class="container main">
-  <!-- Example row of columns -->
-  <div class="row">
-    <div class="col-md-4">
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="/1819dw/LearnSmart/assets/images/office.png" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Orest Brykowytch</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="/1819dw/LearnSmart/assets/images/globe.png" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Daniel Wilson</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="/1819dw/LearnSmart/assets/images/arrow.png" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Adam Whitmore</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    </div>
-  </div>
+
+</div>  
 
 </main>
 

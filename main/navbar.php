@@ -1,6 +1,5 @@
-      <?php 
-      session_start();
-      include('main/database/access_control.php');
+<?php 
+session_start();
 
       ?>
       <!-- start nav bar -->
@@ -43,12 +42,12 @@
                           <a class="btn btn-danger nav-link" href="/1819dw/LearnSmart/user/logout.php">Logout</a>
                         </li>
 
-                    <?php
-                      }
-                    ?>
-                    
-                    
-                    </li>
-                  </ul>
-                </div>
-        </nav>
+            <?php
+              }
+            ?>
+            
+            
+            </li>
+          </ul>
+        </div>
+</nav>

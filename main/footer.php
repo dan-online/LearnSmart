@@ -6,13 +6,12 @@
 <hr />
 
 <p><?php 
-// only an administrator should see the debug stuff:
-    ?>
-    <p>The information below is used to DEBUG your program.  It is designed for ONLY a user with role administrator. </p>
-<?php 
+if ($access_control['role'] == "Administrator")
+{
 echo '<pre>';
 print_r(get_defined_vars()); 
 echo '</pre>';
+}
 ?>
 
 
