@@ -2,9 +2,9 @@
 <html lang="en">
       
 <?php 
+include('main/database/access_control.php');
 include("main/head.php");
 include('main/navbar.php');
-include('main/database/access_control.php');
 ?>
 <body>
 

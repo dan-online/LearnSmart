@@ -25,7 +25,7 @@
                   <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                     <?php 
-                      if ($access_control['logged_in'] == "no") {
+                      if ($access_control['logged_in']) {
                     ?>
                     </li>
                     <li class="nav-item">
