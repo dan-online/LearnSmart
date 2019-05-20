@@ -6,12 +6,11 @@
 <hr />
 
 <p><?php 
-if ($access_control['role'] == "Administrator")
-{
+/*
 echo '<pre>';
 print_r(get_defined_vars()); 
 echo '</pre>';
-}
+*/
 ?>
 
 

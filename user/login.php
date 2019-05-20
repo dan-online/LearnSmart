@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en">
 <?php 
+include('../main/database/access_control.php');
 include('../main/head.php');
 include('../main/navbar.php');
-include('../main/database/access_control.php');
 session_start();
 ?>
 <body>
@@ -81,7 +81,7 @@ header('location:index.php');
   </body>
 
 <?php
-include('footer.php');
+include('../main/footer.php');
 ?>
 
 </html>

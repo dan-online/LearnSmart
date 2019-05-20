@@ -5,7 +5,6 @@
 include('../main/database/access_control.php');
 include('../main/head.php');
 include('../main/navbar.php');
-include('../main/database/access_control.php');
 session_start();
 ?>
 
@@ -22,7 +21,7 @@ session_start();
 
         <?php
 
-        include('main/footer.php');
+        include('../main/footer.php');
 
         ?>
     </body>

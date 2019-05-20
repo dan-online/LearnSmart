@@ -20,28 +20,28 @@ session_start();
   <div class="row">
     <div class="col-md-4">
       <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="/1819dw/LearnSmart/assets/images/office.png" alt="Card image cap">
+        <img class="card-img-top" src="https://orestbrykowytch.github.io/assets/images/Favicon.png" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">Orest Brykowytch</h5>
-          <a href="https://orestbrykowytch.github.io" class="btn btn-primary">Go somewhere</a>
+          <a href="https://orestbrykowytch.github.io" class="btn btn-primary">Meet Orest</a>
         </div>
       </div>
     </div>
     <div class="col-md-4">
       <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="/1819dw/LearnSmart/assets/images/globe.png" alt="Card image cap">
+        <img class="card-img-top" src="https://dancodes.online/assets/images/me.png" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">Daniel Wilson</h5>
-          <a href="https://orestbrykowytch.github.io" class="btn btn-primary">Go somewhere</a>
+          <a href="https://dancodes.online" class="btn btn-primary">Meet Daniel</a>
         </div>
       </div>
     </div>
     <div class="col-md-4">
       <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="/1819dw/LearnSmart/assets/images/arrow.png" alt="Card image cap">
+        <img class="card-img-top" src="/1819dw/LearnSmart/assets/images/office.png" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">Adam Whitmore</h5>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <a href="https://github.com/Thiccmore" class="btn btn-primary">Meet adam</a>
         </div>
       </div>
     </div>
@@ -54,7 +54,7 @@ session_start();
 
 
     <?php
-    include('main/footer.php');
+    include('../main/footer.php');
     ?>
   </body>
 

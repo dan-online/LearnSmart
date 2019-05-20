@@ -8,12 +8,6 @@ include('../main/navbar.php');
 <body>
 <div class="container m-3 main"> <!-- open container -->
 
-
-<div class="alert alert-info" role="alert">
-  <p> <strong>Thank you</strong> for registering.</p>
-  <p>New regsitrations need to approved by a moderator, so please be patient.</p>
-</div>
-
 <form action="register_process.php" method="post">
 
   <div class="form-group">
@@ -51,7 +45,7 @@ include('../main/navbar.php');
   </body>
 
 <?php
-include('footer.php');
+include('../main/footer.php');
 ?>
 
 </html>
