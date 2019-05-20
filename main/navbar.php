@@ -13,7 +13,7 @@ session_start();
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav">
                     <li class="nav-item active">
-                      <a style="font-size: 16px" class="btn btn-primary nav-link" href="/1819dw/LearnSmart">About us <i class="fa fa-users"></i><span class="sr-only">(current)</span></a>
+                      <a style="font-size: 16px" class="btn btn-primary nav-link" href="/1819dw/LearnSmart/about">About us <i class="fa fa-users"></i><span class="sr-only">(current)</span></a>
                     </li>
                     <?php if($access_control['logged_in'] != 'no') { ?>
                     <li class="nav-item active">

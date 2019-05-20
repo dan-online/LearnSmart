@@ -1,6 +1,7 @@
 <?php
 // below we start a session and include our database connection
 session_start(); 
+include('../main/database/access_control.php');
 include('../main/database/database_inc.php');
 // the 2 lines below capture the data sent from a form.
 $email = $_POST['email'];
