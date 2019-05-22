@@ -12,7 +12,7 @@
                     <li class="nav-item active">
                       <a style="font-size: 16px" class="btn btn-primary nav-link" href="/1819dw/LearnSmart/about">About us <i class="fa fa-users"></i><span class="sr-only">(current)</span></a>
                     </li>
-                    <?php if($access_control['logged_in']) { ?>
+                    <?php if($access_control['email']) { ?>
                     <li class="nav-item active">
                       <a style="font-size: 16px" class="btn btn-primary nav-link" href="/1819dw/LearnSmart/home">Home <i class="fa fa-play-circle"></i></a>
                     </li>
@@ -21,7 +21,7 @@
                   <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                     <?php 
-                      if (!$access_control['logged_in']) {
+                      if (!$access_control['email']) {
                     ?>
                     </li>
                     <li class="nav-item">
