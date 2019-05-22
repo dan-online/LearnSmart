@@ -2,10 +2,10 @@
 <html lang="en">
       
 <?php 
+session_start();
 include('../main/database/access_control.php');
 include('../main/head.php');
 include('../main/navbar.php');
-session_start();
 ?>
 
     <body>

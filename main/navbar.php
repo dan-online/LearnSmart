@@ -1,7 +1,4 @@
-<?php 
-session_start();
 
-      ?>
       <!-- start nav bar -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <a style="color: #407aef" class="navbar-brand" href="/1819dw/LearnSmart">
@@ -15,7 +12,7 @@ session_start();
                     <li class="nav-item active">
                       <a style="font-size: 16px" class="btn btn-primary nav-link" href="/1819dw/LearnSmart/about">About us <i class="fa fa-users"></i><span class="sr-only">(current)</span></a>
                     </li>
-                    <?php if($access_control['logged_in'] != 'no') { ?>
+                    <?php if($access_control['logged_in']) { ?>
                     <li class="nav-item active">
                       <a style="font-size: 16px" class="btn btn-primary nav-link" href="/1819dw/LearnSmart/home">Home <i class="fa fa-play-circle"></i></a>
                     </li>
@@ -24,7 +21,7 @@ session_start();
                   <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                     <?php 
-                      if ($access_control['logged_in']) {
+                      if (!$access_control['logged_in']) {
                     ?>
                     </li>
                     <li class="nav-item">
