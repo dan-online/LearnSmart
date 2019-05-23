@@ -19,10 +19,11 @@ include('../main/navbar.php');
 
         </div>
 
-        <?php
-
-        include('../main/footer.php');
-
-        ?>
+        
     </body>
 </html>
+<?php
+
+include('../main/footer.php');
+
+?>
