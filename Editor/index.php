@@ -13,6 +13,7 @@ include('../main/navbar.php');
 <textarea id="area" style="width:100%; height:40%">
 
 </textarea>
+<button class="btn btn-primary" onclick="saveFunction()">Save</button>
 </div>
 <script src="/1819dw/LearnSmart/assets/js/mirror.js"></script>s
 <script>
@@ -36,7 +37,7 @@ var editor = CodeMirror.fromTextArea(document.getElementById("area"), {
 
   function saveFunction()
   {
-    var x = document.getElementById("codeEditor").value;  
+    var x = document.getElementById("area").value;  
     var a = document.createElement("a");
     var file = new Blob([x], {type: "text/plain"});
     console.log(file);
