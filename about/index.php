@@ -31,8 +31,8 @@ session_start();
       <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="https://dancodes.online/assets/images/me.png" alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">Daniel Wilson</h5>
-          <a href="https://dancodes.online" class="btn btn-primary">Meet Daniel</a>
+          <h5 class="card-title">DanCodes</h5>
+          <a href="https://dancodes.online" class="btn btn-primary">Meet Dan</a>
         </div>
       </div>
     </div>

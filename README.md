@@ -6,5 +6,5 @@ Tutorial site that is based around coding to help digital design students.
 
 # Contributors
  - Orest Brykowytch (https://github.com/OrestBrykowytch)
- - Daniel Wilson (https://github.com/MayorChano)
+ - DanCodes (https://github.com/MayorChano)
  - Adam Whitmore (https://github.com/Thiccmore)
