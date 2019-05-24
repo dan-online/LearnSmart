@@ -7,7 +7,7 @@
 
 <p><?php 
 
-if ($access_control['role'] == "Administrator")
+if ($access_control['role'] == "Administrator" && $access_control['logged_in'] == "yes")
 {
     echo '<pre>';
     print_r(get_defined_vars()); 
