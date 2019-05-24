@@ -34,10 +34,22 @@ var editor = CodeMirror.fromTextArea(document.getElementById("area"), {
 });
 
 
-</script>
-<?php
-    include('../main/footer.php');
-    ?>
-  </body>
+  function saveFunction()
+  {
+    var x = document.getElementById("codeEditor").value;  
+    var a = document.createElement("a");
+    var file = new Blob([x], {type: "text/plain"});
+    console.log(file);
+    a.href = URL.createObjectURL(file);
+    a.download = "yourCode.txt";
+    a.click();
+  }
+
+  </script>
+
+  <?php
+  include('../main/footer.php');
+  ?>
+</body>
 
 </html>

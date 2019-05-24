@@ -41,7 +41,7 @@ session_start();
         <img class="card-img-top" src="/1819dw/LearnSmart/assets/images/office.png" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">Adam Whitmore</h5>
-          <a href="https://github.com/Thiccmore" class="btn btn-primary">Meet adam</a>
+          <a href="https://github.com/Thiccmore" class="btn btn-primary">Meet Adam</a>
         </div>
       </div>
     </div>

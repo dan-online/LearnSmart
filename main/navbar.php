@@ -12,10 +12,13 @@
                     <li class="nav-item active">
                       <a style="font-size: 16px" class="btn btn-primary nav-link" href="/1819dw/LearnSmart/about">About us <i class="fa fa-users"></i><span class="sr-only">(current)</span></a>
                     </li>
-                    <?php if($access_control['email']) { ?>
+                    <?php if($access_control['logged_in'] == "yes") 
+                    { ?>
                     <li class="nav-item active">
                       <a style="font-size: 16px" class="btn btn-primary nav-link" href="/1819dw/LearnSmart/home">Home <i class="fa fa-play-circle"></i></a>
                     </li>
+                    <li class="nav-item active">
+                      <a style="font-size: 16px" class="btn btn-primary nav-link" href="/1819dw/LearnSmart/Editor/index.php">Editor <i class="fa fa-code" aria-hidden="true"></i></a>
                     <?php } ?>
                   </ul>
                   <ul class="navbar-nav ml-auto">
