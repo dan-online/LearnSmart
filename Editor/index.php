@@ -15,7 +15,7 @@ include('../main/navbar.php');
 </textarea>
 <button class="btn btn-primary" onclick="saveFunction()">Save</button>
 </div>
-<script src="/1819dw/LearnSmart/assets/js/mirror.js"></script>s
+<script src="/1819dw/LearnSmart/assets/js/mirror.js"></script>
 <script>
 
 /*var editor = CodeMirror.fromTextArea(document.getElementById('area'), {
