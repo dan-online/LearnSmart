@@ -2,11 +2,14 @@
 <html lang="en">
       
 <?php 
+session_start();
 include('../main/database/access_control.php');
 include('../main/head.php');
 include('../main/navbar.php');
-include('../main/database/access_control.php');
-session_start();
+if ($access_control['logged_in_now'] != "yes")
+{
+  header('location:../index.php');
+}
 ?>
 <body>
 

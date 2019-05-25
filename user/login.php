@@ -10,6 +10,7 @@ session_start();
 <div class="container m-3 main"> <!-- open container -->
 
 <?php 
+
 if ($access_control['logged_in'] == "no") {
 ?>  
 
