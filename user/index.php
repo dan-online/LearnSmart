@@ -1,7 +1,7 @@
 <!-- Dashboard -->
 <?php
 session_start();
-if ($access_control['logged_in_now'] != "yes")
+if ($access_control['logged_in'] != "yes")
 {
   header('location:../index.php');
 }

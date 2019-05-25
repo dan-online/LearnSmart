@@ -64,7 +64,7 @@ if ($access_control['logged_in'] == "no") {
 } else { 
 // if someone is already logged in, why would
 // we want them on this page??
-header('location:index.php');
+header('location:../index.php');
 }
 ?>
 

@@ -6,7 +6,7 @@ session_start();
 include('../main/database/access_control.php');
 include('../main/head.php');
 include('../main/navbar.php');
-if ($access_control['logged_in_now'] != "yes")
+if ($access_control['logged_in'] != "yes")
 {
   header('location:../index.php');
 }

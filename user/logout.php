@@ -12,7 +12,7 @@ if (isset($_SESSION['unique_id_of_logged_in_user']))
 {
 
     $unique_id_of_logged_in_user = $_SESSION['unique_id_of_logged_in_user'];
-    include('database_inc.php');
+    include('../main/database/database_inc.php');
     $logout_query = mysqli_query($connect,"UPDATE users SET logged_in_now = 0 WHERE id = '$unique_id_of_logged_in_user';");
 
     // the code from 2 lines below is used from https://stackoverflow.com/questions/3989347/php-why-cant-i-get-rid-of-this-session-id-cookie

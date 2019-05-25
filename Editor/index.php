@@ -8,13 +8,14 @@ include('../main/database/access_control.php');
 include('../main/head.php');
 include('../main/navbar.php');
 session_start();
-if ($access_control['logged_in_now'] != "yes")
+if ($access_control['logged_in'] != "yes")
 {
   header('location:../index.php');
 }
 ?>
 <body>
 <div class="container main">
+  
 <textarea id="area" style="width:100%; height:40%">
 
 </textarea>
@@ -31,7 +32,7 @@ var editor = CodeMirror.fromTextArea(document.getElementById("area"),
   matchBrackets: true,
   theme: 'ambience',
   value: "function myScript(){return 100;}\n",
-  mode:  "javascript"
+  mode:  "default"
 });
 
 
