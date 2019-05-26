@@ -15,7 +15,7 @@
                       <a style="font-size: 16px" class="btn btn-primary nav-link" href="/1819dw/LearnSmart/home/index.php">Home <i class="fa fa-play-circle"></i></a>
                     </li>
                     <li class="nav-item active">
-                      <a style="font-size: 16px" class="btn btn-primary nav-link" href="/1819dw/LearnSmart/home">Dashboard <i class="fa fa-play-circle"></i></a>
+                      <a style="font-size: 16px" class="btn btn-primary nav-link" href="/1819dw/LearnSmart/dashboard/index.php">Dashboard <i class="fa fa-play-circle"></i></a>
                     </li>
                     <li class="nav-item active">
                       <a style="font-size: 16px" class="btn btn-primary nav-link" href="/1819dw/LearnSmart/editor/index.php">Editor <i class="fa fa-code" aria-hidden="true"></i></a>
