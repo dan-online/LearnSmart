@@ -3,9 +3,9 @@
       
 <?php
 session_start();
-include('LearnSmart/main/database/access_control.php');
-include('LearnSmart/main/head.php');
-include('LearnSmart/main/navbar.php');
+include('../../main/database/access_control.php');
+include('../../main/head.php');
+include('../../main/navbar.php');
 if ($access_control['logged_in'] != "yes")
 {
   header('location:../index.php');
