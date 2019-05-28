@@ -38,7 +38,7 @@
                     <?php
                       } else {
                     ?>
-                        <a class="btn btn-primary nav-link" href="/1819dw/LearnSmart/user/profile/">You are logged in as <?php echo $access_control['username']; ?> </a>
+                        <a class="btn btn-primary nav-link" href="/1819dw/LearnSmart/user/profile/index.php">You are logged in as <?php echo $access_control['username']; ?> </a>
                         
                         </li>
                         <li class="nav-item">
