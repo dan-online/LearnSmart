@@ -3,7 +3,6 @@
 <head>
 <style>
 #editor {
-    position: absolute;
     width: 500px;
     height: 400px;
 }
@@ -22,7 +21,19 @@ if ($access_control['logged_in'] != "yes")
 ?>
 <body>
 <div class="container main">
-  
+  <select onchange="load(this.options[this.selectedIndex].value)">
+    <option selected>Javascript</option>
+    <option>PHP</option>
+    <option>CPP</option>
+    <option>CSS</option>
+    <option>HTML</option>
+    <option>Java</option>
+    <option>Json</option>
+    <option>Markdown</option>
+    <option>MySQL</option>
+    <option>Python</option>
+    <option>SQL</option>
+  </select>
 <div id="editor">some text</div>
 <br>
 <button class="btn btn-primary" onclick="saveFunction()">Save</button>
@@ -66,11 +77,21 @@ var editor = CodeMirror.fromTextArea(document.getElementById("area"),
   include('../main/footer.php');
   ?>
   <script src="ace.js" type="text/javascript" charset="utf-8"></script>
-  <script src="mode-javascript.js" type="text/javascript" charset="utf-8"></script>
+  <script id="script" src="mode-javascript.js" type="text/javascript" charset="utf-8"></script>
 <script>
-    var editor = ace.edit("editor");
-    var JavaScriptMode = ace.require("ace/mode/javascript").Mode;
+var editor = ace.edit("editor");
+var JavaScriptMode = ace.require("ace/mode/javascript").Mode;
 editor.session.setMode(new JavaScriptMode());
+
+function load(name) {
+  name = name.toLowerCase();
+  //var script = document.createElement('script');
+  //script.src= 'mode-' + name + '.js';
+  //document.getElementsByTagName('head')[0].appendChild(script)
+  //script.onload = function () {
+    editor.session.setMode("ace/mode/" + name)
+  //}
+}
 </script>
 </body>
 
