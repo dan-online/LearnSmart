@@ -21,7 +21,7 @@ if ($access_control['logged_in'] != "yes")
 ?>
 <body>
 <div class="container main">
-  <select onchange="load(this.options[this.selectedIndex].value)">
+  <select id="selected" onchange="load(this.options[this.selectedIndex].value)">
     <option selected>Javascript</option>
     <option>PHP</option>
     <option>CPP</option>
@@ -39,39 +39,7 @@ if ($access_control['logged_in'] != "yes")
 <button class="btn btn-primary" onclick="saveFunction()">Save</button>
 </div>
 <script src="/1819dw/LearnSmart/assets/js/mirror.js"></script>
-<script>
 
-var editor = CodeMirror.fromTextArea(document.getElementById("area"),
-{
-  lineNumbers: true,
-  styleActiveLine: true,
-  matchBrackets: true,
-  theme: 'ambience',
-  value: "function myScript(){return 100;}\n",
-  mode:  "default"
-});
-
-
-  function saveFunction()
-  {
-    var name = prompt("What would you like to name this file? Include extension, please!", "fileName.fileType");
-    if (name != null && name != "fileName.fileType")
-    {
-      var x = document.getElementById("area").value;  
-      var a = document.createElement("a");
-      var file = new Blob([x], {type: "text/plain"});
-      console.log(file);
-      a.href = URL.createObjectURL(file);
-      a.download = name;
-      a.click();
-    }
-    else
-    {
-      alert("Please set a valid name and extension for your file!");
-    }
-  }
-
-  </script>
 
   <?php
   include('../main/footer.php');
@@ -92,6 +60,27 @@ function load(name) {
     editor.session.setMode("ace/mode/" + name)
   //}
 }
+function saveFunction()
+  {
+    var name = prompt("What would you like to name this file?", "File Name");
+    if (name != null && name != "File Name")
+    {
+      var array = {javascript: '.js', cpp: '.cpp', css: '.css', html: '.html', java: '.java', json: '.json', markdown: '.md', mysql: '.txt', php: '.php', python: '.py', sql: '.txt'}
+      var x = editor.getValue();  
+      var a = document.createElement("a");
+      var file = new Blob([x], {type: "text/plain"});
+      console.log(file);
+      a.href = URL.createObjectURL(file);
+      let ending = document.getElementById('selected').value;
+      a.download = name + array[ending.toLowerCase()];
+      a.click();
+    }
+    else
+    {
+      alert("Please set a valid name and extension for your file!");
+    }
+  }
+
 </script>
 </body>
 
