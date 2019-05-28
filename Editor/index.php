@@ -1,6 +1,13 @@
 <!doctype html>
 <html lang="en">
 <head>
+<style>
+#editor {
+    position: absolute;
+    width: 500px;
+    height: 400px;
+}
+</style>
 <link rel="stylesheet" href="/1819dw/LearnSmart/assets/css/mirror.css">
 </head>
 <?php 
@@ -16,9 +23,7 @@ if ($access_control['logged_in'] != "yes")
 <body>
 <div class="container main">
   
-<textarea id="area" style="width:100%; height:40%">
-
-</textarea>
+<div id="editor">some text</div>
 <br>
 <button class="btn btn-primary" onclick="saveFunction()">Save</button>
 </div>
@@ -60,6 +65,13 @@ var editor = CodeMirror.fromTextArea(document.getElementById("area"),
   <?php
   include('../main/footer.php');
   ?>
+  <script src="ace.js" type="text/javascript" charset="utf-8"></script>
+  <script src="mode-javascript.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    var JavaScriptMode = ace.require("ace/mode/javascript").Mode;
+editor.session.setMode(new JavaScriptMode());
+</script>
 </body>
 
 </html>
