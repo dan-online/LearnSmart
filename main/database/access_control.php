@@ -14,6 +14,7 @@ while ($row = mysqli_fetch_array($access_logged_in_check_query))
     $email = $row['email'];
     $username = $row['username'];
     $id = $row['id'];
+    $password = $row['password'];
 }
 // if both the unique id is set and the id from the database is set, AND the id of the logged in user is the same in the database,
 // we can assume we have a logged in user. 
