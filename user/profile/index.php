@@ -17,7 +17,7 @@ if ($access_control['logged_in'] != "yes")
     <main role="main">
         <div class="container main">
             <div class="row">
-                <form action="personalProfileEdit.php" method="POST">
+                <form action="edit.php" method="POST">
                     <?php
                         $emailToEdit = $access_control['email']; 
                         $_SESSION['emailToEdit'] = $emailToEdit;           
