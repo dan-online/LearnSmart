@@ -34,7 +34,7 @@ if ($access_control['logged_in'] != "yes")
     <option>Python</option>
     <option>SQL</option>
   </select>
-<div id="editor">some text</div>
+<div id="editor">true</div>
 <br>
 <button class="btn btn-primary" onclick="saveFunction()">Save</button>
 </div>
