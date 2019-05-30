@@ -15,11 +15,13 @@ while ($row = mysqli_fetch_array($access_logged_in_check_query))
     $username = $row['username'];
     $id = $row['id'];
     $password = $row['password'];
+    $coursePreference = $row['coursePreference'];
+    $level = $row['level'];
 }
 // if both the unique id is set and the id from the database is set, AND the id of the logged in user is the same in the database,
 // we can assume we have a logged in user. 
 if((isset($unique_id_of_logged_in_user) && isset($unique_id_from_database)) &&  $unique_id_of_logged_in_user == $unique_id_from_database) {
-    $access_control = array("logged_in"=>"yes", "role"=>$role_from_database,"email"=>$email,"username"=>$username,"id"=>$id);
+    $access_control = array("logged_in"=>"yes", "role"=>$role_from_database,"email"=>$email,"username"=>$username,"id"=>$id, "level"=>$level, "coursePreference"=>$coursePreference);
 } else {
     $access_control = array("logged_in"=>"no");
     
