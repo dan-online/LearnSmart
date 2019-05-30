@@ -26,10 +26,39 @@ unset($_SESSION['registered_success']);
 }
 ?>
 
- <main role="main">
-
-
-</main>
+<div class="container main">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="/1819dw/LearnSmart/assets/images/arrow.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Simple learning</h5>
+          <p class="card-text"></p>
+          <a href="user/login.php" class="btn btn-primary">Login now!</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="/1819dw/LearnSmart/assets/images/office.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Created by students</h5>
+          <p class="card-text"></p>
+          <a href="about/" class="btn btn-primary">About us</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="/1819dw/LearnSmart/assets/images/globe.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Global community</h5>
+          <p class="card-text"></p>
+          <a href="home/" class="btn btn-primary">View videos</a>
+        </div>
+      </div>
+    </div>
+</div>
 
 
 </div>

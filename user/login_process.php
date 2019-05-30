@@ -49,7 +49,7 @@ while ($row = mysqli_fetch_array($result))
     session_id = '$session_id'
      WHERE unique_id = '$unique_id_of_logged_in_user';");
     $_SESSION['unique_id_of_logged_in_user'] = $unique_id_of_logged_in_user;
-    header('location:../index.php');
+    header('location:../home/');
   }
   else
   {
