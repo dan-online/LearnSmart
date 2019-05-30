@@ -20,6 +20,7 @@ if ($access_control['logged_in'] != "yes")
 </html>
 <?php
 
+
 include('../main/footer.php');
 
 ?>
