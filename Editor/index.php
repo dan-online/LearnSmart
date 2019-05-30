@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
 <style>
-#editor {
-    width: 500px;
-    height: 400px;
+#editor
+{
+    width: 100%;
+    height: 500px;
 }
 </style>
 <link rel="stylesheet" href="/1819dw/LearnSmart/assets/css/mirror.css">
@@ -24,7 +25,7 @@ if ($access_control['logged_in'] != "yes")
   <select id="selected" onchange="load(this.options[this.selectedIndex].value)">
     <option selected>Javascript</option>
     <option>PHP</option>
-    <option>CPP</option>
+    <option>C++</option>
     <option>CSS</option>
     <option>HTML</option>
     <option>Java</option>
@@ -34,7 +35,12 @@ if ($access_control['logged_in'] != "yes")
     <option>Python</option>
     <option>SQL</option>
   </select>
-<div id="editor">some text</div>
+  <div class="row">
+    <div class="col-6">
+      <div id="editor"></div>
+    </div>
+  </div>
+
 <br>
 <button class="btn btn-primary" onclick="saveFunction()">Save</button>
 </div>
@@ -47,19 +53,17 @@ if ($access_control['logged_in'] != "yes")
   <script src="ace.js" type="text/javascript" charset="utf-8"></script>
   <script id="script" src="mode-javascript.js" type="text/javascript" charset="utf-8"></script>
 <script>
+// Editor Settings and stuff  
 var editor = ace.edit("editor");
 var JavaScriptMode = ace.require("ace/mode/javascript").Mode;
 editor.session.setMode(new JavaScriptMode());
 
-function load(name) {
+function load(name)
+{
   name = name.toLowerCase();
-  //var script = document.createElement('script');
-  //script.src= 'mode-' + name + '.js';
-  //document.getElementsByTagName('head')[0].appendChild(script)
-  //script.onload = function () {
-    editor.session.setMode("ace/mode/" + name)
-  //}
+  editor.session.setMode("ace/mode/" + name);
 }
+
 function saveFunction()
   {
     var name = prompt("What would you like to name this file?", "File Name");
