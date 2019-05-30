@@ -35,7 +35,7 @@ if ($access_control['logged_in'] == "no")
 
 
 <?php
-include('../main/footer.php');
+include('../../main/footer.php');
 ?>
 
 </body>
