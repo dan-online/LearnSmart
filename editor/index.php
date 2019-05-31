@@ -7,6 +7,9 @@
     width: 100%;
     height: 500px;
 }
+.ace_print-margin {
+  display: none !important
+}
 </style>
 <link rel="stylesheet" href="/1819dw/LearnSmart/assets/css/mirror.css">
 </head>
@@ -35,8 +38,9 @@ if ($access_control['logged_in'] != "yes")
     <option>Python</option>
     <option>SQL</option>
   </select>
+  Auto-Save: <input id="auto" onclick="if(this.value != 'true') {this.value = 'true'} else {this.value = ''}" type="checkbox">
   <div class="row">
-    <div class="col-6">
+    <div class="col-12">
       <div id="editor"></div>
     </div>
   </div>
@@ -58,11 +62,36 @@ var editor = ace.edit("editor");
 var JavaScriptMode = ace.require("ace/mode/javascript").Mode;
 editor.session.setMode(new JavaScriptMode());
 
+function getSave() {
+  if(localStorage.save) {
+    var prompt = confirm('Would you like to use your auto-save?');
+    if(prompt) {
+      editor.setValue(localStorage.save, -1);
+      document.getElementById('auto').click();
+    }
+  }
+}
+
+getSave();
+
+editor.getSession().on('change', function() {
+  save()
+});
+
+function save() {
+  if(document.getElementById('auto').value != 'true') return;
+  var value = editor.getValue();
+  localStorage.save = value;
+}
+
+
 function load(name)
 {
   name = name.toLowerCase();
   editor.session.setMode("ace/mode/" + name);
 }
+
+
 
 function saveFunction()
   {
