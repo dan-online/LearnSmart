@@ -13,21 +13,39 @@ if ($access_control['logged_in'] == "no")
 ?>
 <body>
 
+
+
 <div class="container main my-3"> <!-- open container -->
     <main role="main">
         <div class="container main">
             <div class="row">
-                <form action="edit.php" method="POST">
-                    <?php
-                        $emailToEdit = $access_control['email']; 
-                        $_SESSION['emailToEdit'] = $emailToEdit;           
-                    ?>
-                    <div class="form-group">
-                        <label for="username">Username - I recommend you don't change this.</label>
-                        <input type="username" name="username" class="form-control" id="username1" placeholder="<?php echo $access_control['username']; ?>">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+                <div class="col-12">
+                    <form action="edit.php" method="POST">
+                        <?php
+                            $emailToEdit = $access_control['email']; 
+                            $_SESSION['emailToEdit'] = $emailToEdit;           
+                        ?>
+                        <div class="form-group">
+                            <label for="username"><h5>Username</h5></label>
+                            <input type="username" name="username" class="form-control" id="username1" placeholder="<?php echo $access_control['username']; ?>">
+                            <br><br>
+                            <label for="password"><h5>Password</h5></label>
+                            <input type="password" name="password" class="form-control" id="password1" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;">
+                            <br><br>
+                            <label for="coursePreference"><h5>Course Preference</h5></label><br>
+                            <input type="checkbox" name="compiled" value="compiled"> Compiled Languages <br>
+                            <input type="checkbox" name="scripted" value="scripted"> Scripted Languages <br>
+                            <input type="checkbox" name="interpreted" value="interpreted"> Interpreted Languages <br>
+                            <input type="checkbox" name="ddl" value="ddl"> Domain Declarative Languages <br>
+                            <br><br>
+                            <label for="level"><h5>Level of Knowledge</h5></label><br>
+                            <input type="radio" name="level1" value="beginner"> Beginner <br>
+                            <input type="radio" name="level2" value="intermediate"> Intermediate <br>
+                            <input type="radio" name="level3" value="advanced"> Advanced <br>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
             </div>
         </div>
     </main>
