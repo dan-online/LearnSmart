@@ -19,6 +19,7 @@ if($result) {
 echo '<pre><code>';
 print_r(get_defined_vars()); 
 echo '</pre></code>';
-header('location:../../index.php');
+$_SESSION['saved'] = true;
+header('location:index.php');
 
 ?>

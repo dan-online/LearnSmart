@@ -22,10 +22,19 @@ while ($row = mysqli_fetch_array($result))
 {
 ?>
 
-<div class="container main my-3"> <!-- open container -->
+<div class="container main my-3"> 
     <main role="main">
         <div class="container main">
             <div class="row">
+            <?php if($_SESSION['saved']) {
+                $_SESSION['saved'] = false;
+                ?>
+                <div class="col-12">
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong>Saved!</strong>
+                    </div>
+                </div>
+                <?php } ?>
                 <div class="col-12">
                     <form action="edit.php" method="POST">
                         <div class="form-group">
