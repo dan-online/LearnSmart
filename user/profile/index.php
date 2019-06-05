@@ -13,7 +13,14 @@ if ($access_control['logged_in'] == "no")
 ?>
 <body>
 
+<?php
 
+$result = mysqli_query($connect,
+"SELECT * FROM `LearnSmart` WHERE unique_id LIKE '$unique_id_of_logged_in_user';");
+
+while ($row = mysqli_fetch_array($result))
+{
+?>
 
 <div class="container main my-3"> <!-- open container -->
     <main role="main">
@@ -21,10 +28,6 @@ if ($access_control['logged_in'] == "no")
             <div class="row">
                 <div class="col-12">
                     <form action="edit.php" method="POST">
-                        <?php
-                            $emailToEdit = $access_control['email']; 
-                            $_SESSION['emailToEdit'] = $emailToEdit;           
-                        ?>
                         <div class="form-group">
                             <label for="username"><h5>Username</h5></label>
                             <input type="username" name="username" class="form-control" id="username1" placeholder="<?php echo $access_control['username']; ?>">
@@ -33,15 +36,15 @@ if ($access_control['logged_in'] == "no")
                             <input type="password" name="password" class="form-control" id="password1" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;">
                             <br><br>
                             <label for="coursePreference"><h5>Course Preference</h5></label><br>
-                            <input type="checkbox" name="compiled" value="1"> Compiled Languages <br>
-                            <input type="checkbox" name="scripted" value="1"> Scripted Languages <br>
-                            <input type="checkbox" name="interpreted" value="1"> Interpreted Languages <br>
-                            <input type="checkbox" name="ddl" value="1"> Domain Declarative Languages <br>
+                            <input type="checkbox" <?php if($row['compiled'] == 1) {echo 'checked';} ?> name="compiled" value="1"> Compiled Languages <br>
+                            <input type="checkbox" <?php if($row['scripted'] == 1) {echo 'checked';} ?> name="scripted" value="1"> Scripted Languages <br>
+                            <input type="checkbox" <?php if($row['interpreted'] == 1) {echo 'checked';} ?> name="interpreted" value="1"> Interpreted Languages <br>
+                            <input type="checkbox" <?php if($row['ddl'] == 1) {echo 'checked';} ?> name="ddl" value="1"> Domain Declarative Languages <br>
                             <br><br>
                             <label for="level"><h5>Level of Knowledge</h5></label><br>
-                            <input type="radio" name="level" value="beginner"> Beginner <br>
-                            <input type="radio" name="level" value="intermediate"> Intermediate <br>
-                            <input type="radio" name="level" value="advanced"> Advanced <br>
+                            <input type="radio" <?php if($row['level'] == 'beginner') {echo 'checked';} ?> name="level" value="beginner"> Beginner <br>
+                            <input type="radio" <?php if($row['level'] == 'intermediate') {echo 'checked';} ?> name="level" value="intermediate"> Intermediate <br>
+                            <input type="radio" <?php if($row['level'] == 'advanced') {echo 'checked';} ?> name="level" value="advanced"> Advanced <br>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
@@ -54,7 +57,7 @@ if ($access_control['logged_in'] == "no")
 
 
 <?php
-
+}
 
 include('../../main/footer.php');
 ?>
