@@ -23,6 +23,9 @@
                     <li class="nav-item active">
                       <a style="font-size: 16px" class="btn btn-primary nav-link" href="/1819dw/LearnSmart/about">About us <i class="fa fa-users"></i><span class="sr-only">(current)</span></a>
                     </li>
+                    <li class="nav-item active">
+                      <a style="font-size: 16px" class="btn btn-primary nav-link" href="/1819dw/LearnSmart/user/upload">Upload File <i class="fa fa-file-upload"></i></a>
+                    </li>
                     <?php } ?>
                   </ul>
                   <ul class="navbar-nav ml-auto">
